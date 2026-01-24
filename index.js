@@ -17,14 +17,25 @@ const shoppingListInDB = ref(database, "shoppingListNikita")
 
 const inputFieldEl = document.getElementById("input-field");
 const addButtonEl = document.getElementById("add-button");
-const shoppinglistEl = document.getElementById("shopping-list");
+const shoppingListEl = document.getElementById("shopping-list");
 
 addButtonEl.addEventListener('click',function(){
     let inputValue = inputFieldEl.value;
     push(shoppingListInDB, inputValue);
 
-    shoppinglistEl.innerHTML += `<li>${inputValue}</li> `;
+  appendItemToShoppingListEl(inputValue);
 
-    inputFieldEl.value = '';
+  clearInputField();
 
 })
+
+
+function clearInputField(){
+  inputFieldEl.value = null;
+}
+
+function appendItemToShoppingListEl(itemValue){
+  if(itemValue.length > 1){
+    shoppingListEl.innerHTML += `<li>${itemValue}</li> `;
+  }
+}
