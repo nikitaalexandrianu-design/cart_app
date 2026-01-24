@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    font-family: "Playfair Display", serif;
+    background-color: #eef0f3;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    margin: 30px auto;
+}
+
+img{
+    width: 200px;
+    margin: 0 auto;
+}
+
+input, button {
+    border: 0;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Playfair Display", serif;
+}
+
+input {
+  color: #432000;
+  background-color: #dce1eb;
+}
+
+button {
+  color: #fdfdfd;
+  background-color: #055ba0;
+  margin: 16px 0;
+}
