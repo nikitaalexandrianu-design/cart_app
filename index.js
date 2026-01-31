@@ -29,7 +29,7 @@ addButtonEl.addEventListener('click', function () {
     clearInputFieldEl();
   }
 });
-
+  
 onValue(shoppingListInDB, function (snapshot) {
   if (snapshot.val() !== null) {
     let shoppingListArray = Object.values(snapshot.val());
